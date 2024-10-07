@@ -5,7 +5,6 @@ import Link from "next/link";
 import scss from "./Footer.module.scss";
 import styled from "@emotion/styled";
 
-// TODO: Fix footer
 const Footer = () => {
     const { data: session } = useSession();
     const theme = useTheme();

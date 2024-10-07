@@ -3,13 +3,12 @@ import { useSession } from "next-auth/react";
 import SideMenu from "@/components/SideMenu";
 import scss from "./Layout.module.scss";
 import Head from "next/head";
-import Footer from "../Footer";
 
 const Layout = (props: any) => {
     const { data: session } = useSession();
 
     return (
-        <>
+        <div className={scss.content}>
             <Head>
                 <title>DataSoft - Data Dashboard</title>
                 <meta name="description" content="Data Dashboard" />
@@ -25,9 +24,8 @@ const Layout = (props: any) => {
             >
                 {session && <SideMenu />}
                 {props.children}
-                {/* <Footer /> */}
             </main>
-        </>
+        </div>
     );
 };
 

@@ -1,6 +1,5 @@
 import { ThemeOptions } from "@mui/material";
 
-// TODO: Improve dark theme
 const darkTheme: ThemeOptions = {
     palette: {
         mode: "dark",

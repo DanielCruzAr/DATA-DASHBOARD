@@ -6,6 +6,7 @@ import darkTheme from "@/theme/darkTheme";
 import lightTheme from "@/theme/lightTheme";
 import Header from "@/components/Header";
 import Layout from "@/components/Layout";
+import Footer from "@/components/Footer";
 
 const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
 
@@ -41,6 +42,7 @@ const App = ({ Component, pageProps: { session, ...pageProps } }: AppProps) => {
                     <Layout>
                         <Component {...pageProps} />
                     </Layout>
+                    <Footer />
                 </SessionProvider>
             </ThemeProvider>
         </ColorModeContext.Provider>
